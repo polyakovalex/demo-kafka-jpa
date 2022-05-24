@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="70000000566" URI="DRTL//" EvntType="MERGE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <GUID RAWID="39002775385" URI="ESKA//" EvntType="MERGE">A8B1B4D4E06C4DAEB838D8A32EC123DE</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="70000000566" URI="MDM//" EvntType="CREATE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <vers>1</vers>
+                <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2022-03-09T10:23:56+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="PERSONAL_DATA"/>
+                    <GUID URI="MDM//" EvntType="CREATE">05ea464c7b7a42259bb456932f8ddcf1</GUID>
+                    <vers>1</vers>
+                    <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                    <Data>
+                        <Statement>
+                            <V_ListTuples>
+                                <Item Name="BirthDate">
+                                    <V_date>1971-04-23</V_date>
+                                </Item>
+                                <Item Name="BirthDateQc">
+                                    <V_string>EDITED</V_string>
+                                </Item>
+                                <Item MasterURI="//KNOSIS/GENDER_TYPE_REF/2" Name="Gender">
+                                    <V_string>Женский</V_string>
+                                </Item>
+                                <Item MasterURI="//KNOSIS/TAX_RESIDENT_REF/1" Name="ResidentFCL">
+                                    <V_string>Резидент</V_string>
+                                </Item>
+                            </V_ListTuples>
+                        </Statement>
+                    </Data>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

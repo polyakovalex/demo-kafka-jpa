@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="10038703076" URI="DR01//" EvntType="MERGE">39A7EBE6D8E64F668C402156A6EA2601</GUID>
+                <GUID RAWID="10105030610" URI="DRTL//" EvntType="MERGE">EBF477A789E2426699FD869F725DBBFD</GUID>
+                <GUID RAWID="37049141873" URI="ESKA//" EvntType="MERGE">9E943462DE0D4426B56A7339C3D3F4E7</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="10038703076" URI="MDM//" EvntType="UPDATE">39A7EBE6D8E64F668C402156A6EA2601</GUID>
+                <vers>5</vers>
+                <UnxTimeStamp asString="2021-11-23T13:42:26.482+03:00">1637664146482</UnxTimeStamp>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

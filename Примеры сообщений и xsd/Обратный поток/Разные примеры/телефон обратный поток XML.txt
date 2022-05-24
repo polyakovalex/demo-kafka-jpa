@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+	<MessageBody>
+		<MDMSubject>
+			<Wrappers>
+				<GUID RAWID="8c30f1db370711ec9c75005056b06933" URI="AKHD//" EvntType="MERGE">EF15406AE1214B2B9DD161210234110A</GUID>
+				<GUID RAWID="36820261325" URI="ESKA//" EvntType="MERGE">80936FFC01424EA8AA42B718A3C33B30</GUID>
+			</Wrappers>
+			<Domain>
+				<Specification UniqID="ROOT"/>
+				<GUID RAWID="8c30f1db370711ec9c75005056b06933" URI="MDM//" EvntType="UPDATE">EF15406AE1214B2B9DD161210234110A</GUID>
+				<vers>19</vers>
+				<UnxTimeStamp asString="2021-10-27T14:46:05.680+03:00">1635335165680</UnxTimeStamp>
+				<Nested>
+					<Specification UniqID="END_POINTS"/>
+					<GUID URI="MDM//" EvntType="UPDATE">6fb57d342ae947d1935f9f84629d5b9e</GUID>
+					<vers>9</vers>
+					<UnxTimeStamp asString="2021-10-27T14:46:05.680+03:00">1635335165680</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="CONTACTS"/>
+						<GUID URI="MDM//" EvntType="UPDATE">b3eca67650aa4605a16c6d78b097262c</GUID>
+						<vers>3</vers>
+						<UnxTimeStamp asString="2021-10-27T14:46:05.680+03:00">1635335165680</UnxTimeStamp>
+						<Nested>
+							<Specification UniqID="//KNOSIS/CONTACT_TYPE_REF/2"/>
+							<GUID URI="MDM//" EvntType="UPDATE">d5d0d8358e714c8ea8d0581cb1685ade</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-27T14:46:05.680+03:00">1635335165680</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/36820528950" Name="MOBILE">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-10-27T14:46:05+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<!--Код страны-->
+										<Item Name="CountryCode">
+											<V_string>7</V_string>
+										</Item>
+										<!--Код города/оператора-->
+										<Item Name="CityCode">
+											<V_string>495</V_string>
+										</Item>
+										<!--Номер телефона без кода страны и кода города/оператора-->
+										<Item Name="Number">
+											<V_string>1234567</V_string>
+										</Item>
+										<!--Добавочный номер-->
+										<Item Name="Extension">
+											<V_string>1122</V_string>
+										</Item>
+										<!--номер из источника, может содержать несколько телефонов-->
+										<Item Name="RowSource">
+											<V_string>+74951234567 доб. 7171, +79263791258</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+					</Nested>
+				</Nested>
+			</Domain>
+		</MDMSubject>
+	</MessageBody>
+</Message>

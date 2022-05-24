@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="30237186193" URI="ESKA//" EvntType="MERGE">448AA500DDC84584AF2A298BE4118FAA</GUID>
+                <GUID RAWID="30237186193" URI="DR38//" EvntType="MERGE">1D793A93E02846DF8F62540EDE9F0299</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="30237186193" URI="MDM//" EvntType="UPDATE">448AA500DDC84584AF2A298BE4118FAA</GUID>
+                <vers>17</vers>
+                <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                <Nested>
+                    <Specification UniqID="END_POINTS"/>
+                    <GUID URI="MDM//" EvntType="UPDATE">5b8323b567664a2c9a75ef37c2f885f0</GUID>
+                    <vers>9</vers>
+                    <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="ADDRESSES"/>
+                        <GUID URI="MDM//" EvntType="UPDATE">561286364b09424a9a1de47069a59c49</GUID>
+                        <vers>4</vers>
+                        <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                        <Nested>
+                            <Specification UniqID="//KNOSIS/ADDRESS_TYPE_REF/3"/>
+                            <GUID URI="MDM//" EvntType="UPDATE">32339447673b410d954b939a88c99bd7</GUID>
+                            <vers>4</vers>
+                            <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                            <Data>
+                                <Statement SourceURI="ADDRESS.90334050">
+                                    <META UniqID="LastModified">
+                                        <V_dateTimeStamp>2021-06-08T00:00:00+03:00</V_dateTimeStamp>
+                                    </META>
+                                    <V_ListTuples>
+                                        <Item Name="Country">
+                                            <V_string>643</V_string>
+                                        </Item>
+                                        <Item Name="CountryStr">
+                                            <V_string>РОССИЯ</V_string>
+                                        </Item>
+                                        <Item Name="Primary">
+                                            <V_boolean>false</V_boolean>
+                                        </Item>
+                                        <Item Name="RowSource">
+                                            <V_string>Российская Федерация, 630089, обл Новосибирская, г Новосибирск, ул Адриена Лежена, дом 13, кв. 10</V_string>
+                                        </Item>
+                                        <Item Name="Index">
+                                            <V_string>630089</V_string>
+                                        </Item>
+                                        <Item Name="RegionCode">
+                                            <V_string>54</V_string>
+                                        </Item>
+                                        <Item Name="Region">
+                                            <V_string>Новосибирская</V_string>
+                                        </Item>
+                                        <Item Name="City">
+                                            <V_string>Новосибирск</V_string>
+                                        </Item>
+                                        <Item Name="Street">
+                                            <V_string>Адриена Лежена</V_string>
+                                        </Item>
+                                        <Item Name="HouseNumber">
+                                            <V_string>13</V_string>
+                                        </Item>
+                                        <Item Name="Flat">
+                                            <V_string>10</V_string>
+                                        </Item>
+                                        <Item Name="KladrCode">
+                                            <V_string>5400000100007280046</V_string>
+                                        </Item>
+                                        <Item Name="OkatoCode">
+                                            <V_string>50401364000</V_string>
+                                        </Item>
+                                        <Item Name="AddrFiasGuid">
+                                            <V_string>9ba00f36-cc20-4153-b16f-4c986077b013</V_string>
+                                        </Item>
+                                        <Item Name="District">
+                                            <V_string>Сибирский</V_string>
+                                        </Item>
+                                        <Item Name="RegionType">
+                                            <V_string>обл</V_string>
+                                        </Item>
+                                        <Item Name="CityType">
+                                            <V_string>г</V_string>
+                                        </Item>
+                                        <Item Name="StreetType">
+                                            <V_string>ул</V_string>
+                                        </Item>
+                                    </V_ListTuples>
+                                </Statement>
+                            </Data>
+                        </Nested>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="CRMD//" EvntType="MERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="MDM//" EvntType="UNMERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+                <vers>8</vers>
+                <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2021-12-22T15:22:13+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="FULL_NAME"/>
+                    <GUID URI="MDM//" EvntType="UNMERGE">7face2871ab3478ab1bd31cc4e3e69e4</GUID>
+                    <vers>2</vers>
+                    <UnxTimeStamp asString="2021-12-22T15:21:04.176+03:00">1640175664176</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="CYRILLIC"/>
+                        <GUID URI="MDM//" EvntType="UNMERGE">1f3df12412e547b38f6225cb923a03cd</GUID>
+                        <vers>2</vers>
+                        <UnxTimeStamp asString="2021-12-22T15:21:04.176+03:00">1640175664176</UnxTimeStamp>
+                        <Data>
+                            <Statement>
+                                <V_ListTuples>
+                                    <Item Name="Surname">
+                                        <V_string>Генералов</V_string>
+                                    </Item>
+                                    <Item Name="Name">
+                                        <V_string>Иван</V_string>
+                                    </Item>
+                                    <Item Name="Patronymic">
+                                        <V_string>Иванович</V_string>
+                                    </Item>
+                                    <Item Name="FullName">
+                                        <V_string>Генералов Иван Иванович</V_string>
+                                    </Item>
+                                    <Item Name="FullNameQc">
+                                        <V_string>CONFIRMED_MANUALLY</V_string>
+                                    </Item>
+                                </V_ListTuples>
+                            </Statement>
+                        </Data>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

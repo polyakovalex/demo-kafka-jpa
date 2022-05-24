@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="CRMD//" EvntType="MERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="MDM//" EvntType="UNMERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+                <vers>8</vers>
+                <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2021-12-22T15:22:13+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="PERSONAL_DATA"/>
+                    <GUID URI="MDM//" EvntType="UNMERGE">72a5d0c9dd454161835c484adeaf12be</GUID>
+                    <vers>3</vers>
+                    <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                    <Data>
+                        <Statement>
+                            <V_ListTuples>
+                                <Item Name="BirthDate">
+                                    <V_date>1998-04-12</V_date>
+                                </Item>
+                                <Item Name="BirthDateQc">
+                                    <V_string>EDITED</V_string>
+                                </Item>
+                                <Item MasterURI="//KNOSIS/GENDER_TYPE_REF/1" Name="Gender">
+                                    <V_string>Мужской</V_string>
+                                </Item>
+                                <Item MasterURI="//KNOSIS/TAX_RESIDENT_REF/3" Name="ResidentFCL">
+                                    <V_string>Неизвестно</V_string>
+                                </Item>
+                            </V_ListTuples>
+                        </Statement>
+                    </Data>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

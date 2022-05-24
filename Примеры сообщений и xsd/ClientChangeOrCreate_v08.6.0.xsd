@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 rel. 2 sp1 (x64) (http://www.altova.com) by test (test) -->
+<xs:schema xmlns:mdm="http://mdm.gpb.ru/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" targetNamespace="http://mdm.gpb.ru/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.8.5.1">
+	<xs:annotation>
+		<xs:documentation>Схема проекта Интегрированный MDM для Запроса/ответа в командный канал ЕСФЛ(MDM)</xs:documentation>
+	</xs:annotation>
+	<xs:element name="Message" type="mdm:MessageType">
+		<xs:annotation>
+			<xs:documentation>ROOT. Точка входа в экземпляр Сообщение с событием(-ями) типа MessageType</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="DataItemTupleType">
+		<xs:annotation>
+			<xs:documentation>Атомарный (примитивный) Кортеж элемента Бизнес-Данных. Редко используется самостоятельно. Чаще входит в DataItemListType</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="META" type="mdm:METAType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:group ref="mdm:ChoiceTypeAtomicDataGroup"/>
+				<xs:element name="V_hexBinary" type="xs:hexBinary" nillable="true">
+					<xs:annotation>
+						<xs:documentation>Значение типа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="V_base64" type="xs:base64Binary" nillable="true">
+					<xs:annotation>
+						<xs:documentation>Значение типа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="V_ListTuples" type="mdm:ListDataItemTupleType" nillable="true">
+					<xs:annotation>
+						<xs:documentation>Список "Наименование-Значение" без вложенности</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="V_InnerItemTuple" type="mdm:DataItemTupleType">
+					<xs:annotation>
+						<xs:documentation>Вложенный ключ вида:
+key1/key11/key111-value</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+		<xs:attribute name="MasterURI">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса в MDM, по которому можно точно получить DataItemTuple
+(если это возможно)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="SourceURI" type="xs:anyURI" use="optional">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса в Агенте, по которому можно точно получить DataItemTuple
+(если это возможно)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="Name" type="xs:NMTOKENS">
+			<xs:annotation>
+				<xs:documentation>Наименование (ключ) Атрибута в Кортеже элемента Бизнес-Данных.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EvntType" type="mdm:DomainEventType">
+			<xs:annotation>
+				<xs:documentation>Тип события Statement (Действие с утверждением)
+
+Создан новый, Обновлен на иное значение</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+	<xs:complexType name="DomainTupleType">
+		<xs:annotation>
+			<xs:documentation>Кортеж данных Домена</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Specification">
+				<xs:annotation>
+					<xs:documentation>Спецификация ТИПА Домена. 
+Базовые характеристики: 
+
+Кто владелец ( префикс URI ), 
+
+Уникальный идентификатор в пространстве имен владельца.
+
+Не путать с конкретным экземпляром Домена, определеяемым реквизитом GUID
+</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attributeGroup ref="mdm:DomainSpecAttrGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GUID" maxOccurs="2">
+				<xs:annotation>
+					<xs:documentation>Уникальный идентификатор экземпляра Домена
+(для каждого экземляра субъекта в пространстве участников Интегрированного MDM)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="mdm:USERDEF_GUID">
+							<xs:attributeGroup ref="mdm:DomainGUIDAttrGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="vers">
+				<xs:annotation>
+					<xs:documentation>Номер версии Домена
+(при изменениях в бизнес-данных всегда только последовательно увеличивается)
+</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UnxTimeStamp">
+				<xs:annotation>
+					<xs:documentation>Отметка времени (LongInt)
+ в миллисекундах произошедшего события
+по изменению сведений
+в экземпляре субъекта
+
+Например, 
+1598776181406
+
+Не может быть меньше (ранее) значения  нижележеащего UnxTimeStamp у Nested(вложенного) домена.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:unsignedLong">
+							<xs:attribute name="asString" use="optional">
+								<xs:annotation>
+									<xs:documentation>Отметка времени в формате ISO 8601 Extended
+ 
+например, для 
+UnixTimeStamp = 1598776181406
+asString = '2020-08-30T11:29:41.406+03:00'</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:dateTime">
+										<xs:pattern value=".*(Z|(\+|-)[0-9][0-9]:[0-9][0-9])"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="META" type="mdm:METAType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="Nested" type="mdm:DomainTupleType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Data" nillable="true">
+					<xs:annotation>
+						<xs:documentation>БИЗНЕС-ДАННЫЕ
+(если Домен является последним элементом вложенности)</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Statement" type="mdm:DataItemTupleType" nillable="true" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Утверждение(-я), состоящее(-ие) из одного или множества элементов вида "ключ-Значение"
+
+Если это Документ, то Statement содержит реквизиты документа;
+
+Если это Класс данных, определнный Пользователем, то Statement содержит атрибуты Класса</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListDataItemTupleType">
+		<xs:annotation>
+			<xs:documentation>Список (коллекция) Атомарных (примитивных) Кортежей элемента Бизнес-Данных для описания комплексной Структуры или Класса Бизнес-Данных. Например, описание Документа с многими полями</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="META" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:group ref="mdm:ChoiceTypeAtomicDataGroup"/>
+					</xs:sequence>
+					<xs:attribute name="UniqID" type="xs:token" use="optional">
+						<xs:annotation>
+							<xs:documentation>Уникальный  идентификатор описания ТИПА метаданных в пространстве имен Владельца Справочника Элементов Метаданных
+
+Может не заполняться, если URI Владельца указывает на конкретный экземпляр в коллекции ресурса.</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="URI" type="xs:anyURI" use="optional">
+						<xs:annotation>
+							<xs:documentation>Унифицированный идентификатор ресурса, по которому у Владельца Справочника Элементов Метаданных можно точно получить Сведения о ТИПЕ элемента</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Item" type="mdm:DataItemTupleType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание элементов списка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MessageBodyType">
+		<xs:annotation>
+			<xs:documentation>Тип Тело Сообщения (значимое содержание)</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="MDMSubject" type="mdm:SubjectEventType">
+				<xs:annotation>
+					<xs:documentation>События в Субъекте 
+Интегрированного 
+MDM</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Errors">
+				<xs:annotation>
+					<xs:documentation>Результат обработки запроса в МДМ</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Error" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Информация об ошибке</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="code" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Код ошибки</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="message" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Описание кода ошибки</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="action" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>Рекомендации по устранению ошибки</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="status">
+							<xs:annotation>
+								<xs:documentation>Статус обработки запроса в МДМ
+- warning - бизнес-ошибка
+- error - непредвиденная техн.ошибка</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="warning"/>
+									<xs:enumeration value="error"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="MessageType">
+		<xs:annotation>
+			<xs:documentation>Тип Сообщение</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MessageHeaders" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дополнительные Заголовки к бизнес-содержанию сообщения.
+
+Резерв.
+
+В настоящее время не заполняется.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="META" type="mdm:METAType" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="MessageBody" type="mdm:MessageBodyType">
+				<xs:annotation>
+					<xs:documentation>Содержание сообщения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="METAType">
+		<xs:annotation>
+			<xs:documentation>Тип META для описания метаданных, не являщихся бизнес-данными, но дополняющие или определяющие контекст применения бизнес-данных. 
+
+Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:group ref="mdm:ChoiceTypeAtomicDataGroup"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="mdm:METAAttrGroup"/>
+	</xs:complexType>
+	<xs:complexType name="SubjectEventType">
+		<xs:annotation>
+			<xs:documentation>Тип описания сведений 
+о событиях субъекта Интегрированного MDM</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Wrappers" type="mdm:WrapperDomainType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Ассоциативное окружение группы Доменов (Субъектов), вовлеченных в операции Слияния и Разделения, по завершению которых сформировано Событие в Субъекте Интегрированного MDM (MDMSubject)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Domain" type="mdm:DomainTupleType">
+				<xs:annotation>
+					<xs:documentation>Сведения о Домене
+(Репликационный кортеж)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Otherdata" minOccurs="0" maxOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Иная информация.
+(Для полноты)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="WrapperDomainType">
+		<xs:annotation>
+			<xs:documentation>Кортеж данных "окружающего" Домена (участника операций Слияния и разделения)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Specification" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Спецификация ТИПА Домена. 
+Базовые характеристики: 
+
+Кто владелец ( префикс URI ), 
+
+Уникальный идентификатор в пространстве имен владельца.
+
+Не путать с конкретным экземпляром Домена, определеяемым реквизитом GUID
+</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attributeGroup ref="mdm:DomainSpecAttrGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GUID" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Уникальный идентификатор экземпляра Домена
+(для каждого экземляра субъекта в пространстве участников Интегрированного MDM)</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="mdm:USERDEF_GUID">
+							<xs:attributeGroup ref="mdm:WrapperGUIDAttrGroup"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="vers" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер версии Домена
+(при изменениях в бизнес-данных всегда только последовательно увеличивается)
+</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UnxTimeStamp" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Отметка времени (LongInt)
+ в миллисекундах произошедшего события
+по изменению сведений
+в экземпляре субъекта
+
+Например, 
+1598776181406
+
+Не может быть меньше (ранее) значения  нижележеащего UnxTimeStamp у Nested(вложенного) домена.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:unsignedLong">
+							<xs:attribute name="asString" use="optional">
+								<xs:annotation>
+									<xs:documentation>Отметка времени в формате ISO 8601 Extended
+ 
+например, для 
+UnixTimeStamp = 1598776181406
+asString = '2020-08-30T11:29:41.406+03:00'</xs:documentation>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:dateTime">
+										<xs:pattern value=".*(Z|(\+|-)[0-9][0-9]:[0-9][0-9])"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="META" type="mdm:METAType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Метаданные, расширяющие содержание Statement-предложений
+для целей аудита, учета, поиска, индексации, ограничений политик и иных аспектов.
+
+Являются дополнительными характеристиками (переменными), уточняющими контекст бизнес-значения.
+
+Например, набора элементов метаданных Dublin Core
+ГОСТ Р 7.0.10-2019 (ИСО 15836-1:2017) 
+или иных пользовательских значений по Словарю Терминов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="DomainEventType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Примитивы типов событий Экземпляра Домена: Create,Update,Delete,Close</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="CREATE"/>
+			<xs:enumeration value="UPDATE"/>
+			<xs:enumeration value="DELETE"/>
+			<xs:enumeration value="CLOSE">
+				<xs:annotation>
+					<xs:documentation>Для операций Слияния/Разделения</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNMERGE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="USERDEF_GUID">
+		<xs:annotation>
+			<xs:documentation>Уникальный идентификатор, 32 символа. На основе UUID без символа-разделителя групп</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-fA-F0-9]{32}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="WrapperEventType" final="restriction">
+		<xs:annotation>
+			<xs:documentation>Примитивы типов событий "Окружающего" Экземпляра Домена : Merge, Unmerge, Close</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:Name">
+			<xs:enumeration value="DELETE"/>
+			<xs:enumeration value="CLOSE">
+				<xs:annotation>
+					<xs:documentation>Для операций Слияния/Разделения</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MERGE">
+				<xs:annotation>
+					<xs:documentation>Для операций Слияния/Разделения</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UNMERGE">
+				<xs:annotation>
+					<xs:documentation>Для операций Слияния/Разделения</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="UPDATE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:group name="ChoiceTypeAtomicDataGroup">
+		<xs:annotation>
+			<xs:documentation>Группа Choice для выбора одного simple  (string, date, datetime, int...)</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="V_string" type="xs:string" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_boolean" type="xs:boolean" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_decimal" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_float" type="xs:float">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_Int" type="xs:int" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_integer" type="xs:integer" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_long" type="xs:long" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_double" type="xs:double" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_date" type="xs:date" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_time" type="xs:time" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_dateTime" type="xs:dateTime" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="V_dateTimeStamp" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:dateTime">
+						<xs:pattern value=".*(Z|(\+|-)[0-9][0-9]:[0-9][0-9])"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="V_duration" type="xs:duration" nillable="true">
+				<xs:annotation>
+					<xs:documentation>Значение типа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:attributeGroup name="DomainGUIDAttrGroup">
+		<xs:annotation>
+			<xs:documentation>Группа атрибутов для Спецификации конкретного Экземпляра Домена</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="RAWID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Внутренний идентификатор (id) сущности в источнике. 
+Для целей использования в структурах хранения MDM
+(MDM хранит связи с Истоником)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="UniqID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Уникальный  идентификатор конкретного экземпляра Домена в пространстве имен Владельца в префиксе указанного URI
+</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="URI" type="xs:anyURI" use="optional">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса, по которому можно точно получить Сведения о экземпляре Домена</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EvntType" type="mdm:DomainEventType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Тип события с GUID Домена
+Создан новый, 
+Обновлен на иное значение, 
+Удален(в н.вр. не применимо)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="DomainSpecAttrGroup">
+		<xs:annotation>
+			<xs:documentation>Группа атрибутов для Спецификации типа (класса) Домена</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="UniqID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Уникальный  идентификатор описания ТИПА Домена в пространстве имен Владельца
+Может не заполняться, если URI Владельца указывает на конкретный экземпляр в коллекции ресурса.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="URI" type="xs:anyURI" use="optional">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса, по которому у Владельца можно точно получить Сведения о ТИПЕ Домена</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="METAAttrGroup">
+		<xs:annotation>
+			<xs:documentation>Группа атрибутов для META</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="UniqID" type="xs:token" use="optional">
+			<xs:annotation>
+				<xs:documentation>Уникальный  идентификатор описания ТИПА метаданных в пространстве имен Владельца Справочника Элементов Метаданных
+
+Может не заполняться, если URI Владельца указывает на конкретный экземпляр в коллекции ресурса.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="URI" type="xs:anyURI" use="optional">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса, по которому у Владельца Справочника Элементов Метаданных можно точно получить Сведения о ТИПЕ элемента</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="WrapperGUIDAttrGroup">
+		<xs:annotation>
+			<xs:documentation>Группа атрибутов для Спецификации конкретного Экземпляра "Окружающего" Домена</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="RAWID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Внутренний идентификатор (id) сущности в источнике. 
+Для целей использования в структурах хранения MDM
+(MDM хранит связи с Истоником)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="UniqID" type="xs:string" use="optional">
+			<xs:annotation>
+				<xs:documentation>Уникальный  идентификатор конкретного экземпляра Домена в пространстве имен Владельца в префиксе указанного URI
+</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="URI" type="xs:anyURI" use="optional">
+			<xs:annotation>
+				<xs:documentation>Унифицированный идентификатор ресурса, по которому можно точно получить Сведения о экземпляре Домена</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="EvntType" type="mdm:WrapperEventType" use="optional">
+			<xs:annotation>
+				<xs:documentation>Тип события с GUID Домена
+Создан новый, 
+Обновлен на иное значение, 
+Удален(в н.вр. не применимо)</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:attributeGroup>
+</xs:schema>

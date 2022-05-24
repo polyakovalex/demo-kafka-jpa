@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="CRMD//" EvntType="MERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="MDM//" EvntType="UNMERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+                <vers>8</vers>
+                <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2021-12-22T15:22:13+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="IDENT_CODES"/>
+                    <GUID URI="MDM//" EvntType="UNMERGE">9ffbe4c4cf194c098df3230fbdfc6d0c</GUID>
+                    <vers>2</vers>
+                    <UnxTimeStamp asString="2021-12-22T15:22:13.426+03:00">1640175733426</UnxTimeStamp>
+                    <Data>
+                        <Statement>
+                            <V_ListTuples>
+                                <Item Name="TaxID">
+                                    <V_string>253904486309</V_string>
+                                </Item>
+                                <Item Name="TaxIDQc">
+                                    <V_string>CONFIRMED_MANUALLY</V_string>
+                                </Item>
+                                <Item Name="SNILS">
+                                    <V_string>154-756-324 84</V_string>
+                                </Item>
+                                <Item Name="SNILSQc">
+                                    <V_string>CONFIRMED_MANUALLY</V_string>
+                                </Item>
+                            </V_ListTuples>
+                        </Statement>
+                    </Data>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

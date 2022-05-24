@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ru.gpb.demomqmybatys.mapper.ClientMapper">
+
+  <select id="findById" resultType="ru.gpb.demomqmybatys.model.Client">
+        SELECT
+            id,
+            name as firstName,
+            lastName
+        FROM dias.dbo.client
+        WHERE id = #{id}
+    </select>
+
+  <select id="insertClient" parameterType="ru.gpb.demomqmybatys.model.Client" >
+        exec insert_client
+            @p_name = #{firstName},
+            @p_last_name = #{lastName}
+    </select>
+
+</mapper>

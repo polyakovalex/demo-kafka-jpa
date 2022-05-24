@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="5016908177" URI="ESKA//" EvntType="MERGE">522C8A12A6B04D0881AEDCA6B8513271</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="5016908177" URI="MDM//" EvntType="UPDATE">522C8A12A6B04D0881AEDCA6B8513271</GUID>
+                <vers>4</vers>
+                <UnxTimeStamp asString="2021-11-23T15:09:28.639+03:00">1637669368639</UnxTimeStamp>
+                <Nested>
+                    <Specification UniqID="PERSONAL_DOCS"/>
+                    <GUID URI="MDM//" EvntType="UPDATE">8bffadcdce574adf97cfa4ec13af151f</GUID>
+                    <vers>4</vers>
+                    <UnxTimeStamp asString="2021-11-23T15:09:28.639+03:00">1637669368639</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="OFFICIAL"/>
+                        <GUID URI="MDM//" EvntType="UPDATE">a8275926acbb457299355b529f2561ca</GUID>
+                        <vers>4</vers>
+                        <UnxTimeStamp asString="2021-11-23T15:09:28.639+03:00">1637669368639</UnxTimeStamp>
+                        <Nested>
+                            <Specification UniqID="//KNOSIS/IDENT_CARD_TYPE_REF/1"/>
+                            <GUID URI="MDM//" EvntType="UPDATE">42da90a0e9b543939e5ff288eb961b43</GUID>
+                            <vers>4</vers>
+                            <UnxTimeStamp asString="2021-11-23T15:09:28.639+03:00">1637669368639</UnxTimeStamp>
+                            <Data>
+                                <Statement SourceURI="//ESK/LocalID/37049456143">
+                                    <META UniqID="LastModified">
+                                        <V_dateTimeStamp>2021-11-23T15:09:05+03:00</V_dateTimeStamp>
+                                    </META>
+                                    <V_ListTuples>
+                                        <Item Name="Primary">
+                                            <V_boolean>true</V_boolean>
+                                        </Item>
+                                        <Item Name="Citizenship">
+                                            <V_ListTuples>
+                                                <Item MasterURI="//KNOSIS/CITIZENSHIP_REF/1" Name="Status">
+                                                    <V_string>√‡Ê‰‡ÌËÌ –‘</V_string>
+                                                </Item>
+                                                <Item MasterURI="//KNOSIS/COUNTRY_GROUP_OKSM/185" Name="Country">
+                                                    <V_string>–Œ——»ﬂ</V_string>
+                                                </Item>
+                                                <Item Name="Refugee">
+                                                    <V_boolean>false</V_boolean>
+                                                </Item>
+                                            </V_ListTuples>
+                                        </Item>
+                                        <Item Name="IdentCardData">
+                                            <V_ListTuples>
+                                                <Item Name="Number">
+                                                    <V_string>600501</V_string>
+                                                </Item>
+                                                <Item Name="Series">
+                                                    <V_string>47 02</V_string>
+                                                </Item>
+                                                <Item Name="IssueDate">
+                                                    <V_date>2003-01-11</V_date>
+                                                </Item>
+                                                <Item Name="IssueAuthority">
+                                                    <V_string>Œ“ƒ≈À ¬Õ”“–≈ÕÕ»’ ƒ≈À œ≈–¬ŒÃ¿…— Œ√Œ Œ –”√¿ √Œ–Œƒ¿ Ã”–Ã¿Õ— ¿</V_string>
+                                                </Item>
+                                                <Item Name="DepartmentCode">
+                                                    <V_string>512-003</V_string>
+                                                </Item>
+                                                <Item Name="ExpDate">
+                                                    <V_date>2023-03-27</V_date>
+                                                </Item>
+                                            </V_ListTuples>
+                                        </Item>
+                                        <Item Name="StatusInfo">
+                                            <V_ListTuples>
+                                                <Item Name="Valid">
+                                                    <V_boolean>false</V_boolean>
+                                                </Item>
+                                            </V_ListTuples>
+                                        </Item>
+                                        <Item Name="NameOnIdentCard">
+                                            <V_ListTuples>
+                                                <Item SourceURI="//ESK/LocalID/33471150046" Name="Cyrillic">
+                                                    <V_ListTuples>
+                                                        <Item Name="Surname">
+                                                            <V_string>¡‡‡ÌÌËÍ</V_string>
+                                                        </Item>
+                                                        <Item Name="Name">
+                                                            <V_string>ﬁËÈ</V_string>
+                                                        </Item>
+                                                        <Item Name="Patronymic">
+                                                            <V_string>≈‚„ÂÌËÂ‚Ë˜</V_string>
+                                                        </Item>
+                                                        <Item Name="FullName">
+                                                            <V_string>¡‡‡ÌÌËÍ ﬁËÈ ≈‚„ÂÌËÂ‚Ë˜</V_string>
+                                                        </Item>
+                                                    </V_ListTuples>
+                                                </Item>
+                                            </V_ListTuples>
+                                        </Item>
+                                    </V_ListTuples>
+                                </Statement>
+                            </Data>
+                        </Nested>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

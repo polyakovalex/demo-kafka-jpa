@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="70000000566" URI="DRTL//" EvntType="MERGE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <GUID RAWID="39002775385" URI="ESKA//" EvntType="MERGE">A8B1B4D4E06C4DAEB838D8A32EC123DE</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="70000000566" URI="MDM//" EvntType="CREATE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <vers>1</vers>
+                <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2022-03-09T10:23:56+03:00</V_dateTimeStamp>
+                </META>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

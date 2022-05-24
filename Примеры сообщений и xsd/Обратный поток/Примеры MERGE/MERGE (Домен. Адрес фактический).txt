@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="70000000566" URI="DRTL//" EvntType="MERGE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <GUID RAWID="39002775385" URI="ESKA//" EvntType="MERGE">A8B1B4D4E06C4DAEB838D8A32EC123DE</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="70000000566" URI="MDM//" EvntType="CREATE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <vers>1</vers>
+                <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2022-03-09T10:23:56+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="END_POINTS"/>
+                    <GUID URI="MDM//" EvntType="CREATE">b4ec08dce19049b7940369c1bd4ac5dc</GUID>
+                    <vers>1</vers>
+                    <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="ADDRESSES"/>
+                        <GUID URI="MDM//" EvntType="CREATE">0a066d4f4b2340a3b16a07f7590b1b0b</GUID>
+                        <vers>1</vers>
+                        <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                        <Nested>
+                            <Specification UniqID="//KNOSIS/ADDRESS_TYPE_REF/1"/>
+                            <GUID URI="MDM//" EvntType="CREATE">98e5e103a8694a658fa28cabd627557b</GUID>
+                            <vers>1</vers>
+                            <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                            <Data>
+                                <Statement SourceURI="10113703905">
+                                    <META UniqID="LastModified">
+                                        <V_dateTimeStamp>2022-03-09T00:48:41+03:00</V_dateTimeStamp>
+                                    </META>
+                                    <V_ListTuples>
+                                        <Item Name="Country">
+                                            <V_string>643</V_string>
+                                        </Item>
+                                        <Item Name="CountryStr">
+                                            <V_string>Россия</V_string>
+                                        </Item>
+                                        <Item Name="Primary">
+                                            <V_boolean>false</V_boolean>
+                                        </Item>
+                                        <Item Name="RowSource">
+                                            <V_string>САМАРСКАЯ ОБЛ., Г. САМАРА, УЛ. АЛЕКСАНДРА МАТРОСОВА, Д. 25, КВ. 11</V_string>
+                                        </Item>
+                                        <Item Name="Index">
+                                            <V_string>443063</V_string>
+                                        </Item>
+                                        <Item Name="RegionCode">
+                                            <V_string>63</V_string>
+                                        </Item>
+                                        <Item Name="Region">
+                                            <V_string>Самарская</V_string>
+                                        </Item>
+                                        <Item Name="City">
+                                            <V_string>Самара</V_string>
+                                        </Item>
+                                        <Item Name="Street">
+                                            <V_string>Александра Матросова</V_string>
+                                        </Item>
+                                        <Item Name="HouseNumber">
+                                            <V_string>25</V_string>
+                                        </Item>
+                                        <Item Name="Flat">
+                                            <V_string>11</V_string>
+                                        </Item>
+                                        <Item Name="KladrCode">
+                                            <V_string>6300000100000050016</V_string>
+                                        </Item>
+                                        <Item Name="OkatoCode">
+                                            <V_string>36401386000</V_string>
+                                        </Item>
+                                        <Item Name="AddrFiasGuid">
+                                            <V_string>5d952f68-e1ab-4a03-a530-81a8da2b3c61</V_string>
+                                        </Item>
+                                        <Item Name="District">
+                                            <V_string>Приволжский</V_string>
+                                        </Item>
+                                        <Item Name="RegionType">
+                                            <V_string>обл</V_string>
+                                        </Item>
+                                        <Item Name="CityType">
+                                            <V_string>г</V_string>
+                                        </Item>
+                                        <Item Name="StreetType">
+                                            <V_string>ул</V_string>
+                                        </Item>
+                                        <Item Name="ValidationCode">
+                                            <V_string>VALIDATED</V_string>
+                                        </Item>
+                                        <Item Name="QualityCode">
+                                            <V_string>GOOD</V_string>
+                                        </Item>
+                                    </V_ListTuples>
+                                </Statement>
+                            </Data>
+                        </Nested>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

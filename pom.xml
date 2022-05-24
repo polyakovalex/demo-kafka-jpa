@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>ru.gpb</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+
+    <properties>
+        <java.version>11</java.version>
+        <mybatis.version>2.2.2</mybatis.version>
+        <ibm.mq.version>0.0.3</ibm.mq.version>
+        <spring.boot.version>2.6.2</spring.boot.version>
+        <junit.version>4.13.2</junit.version>
+       <!-- <mssql.jdbc.version>4.0</mssql.jdbc.version>-->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+       <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web-services</artifactId>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>wsdl4j</groupId>
+            <artifactId>wsdl4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+
+        -->
+       <!-- <dependency>
+            <groupId>com.sybase.jconnect</groupId>
+            <artifactId>jconn4</artifactId>
+            <version>7.07</version>
+            &lt;!&ndash;<scope>provided</scope>&ndash;&gt;
+        </dependency>-->
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <executable>true</executable>
+                        <finalName>${project.artifactId}</finalName>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>build-info</id>
+                            <goals>
+                                <goal>build-info</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>com.coderplus.maven.plugins</groupId>
+                    <artifactId>copy-rename-maven-plugin</artifactId>
+                    <version>1.0</version>
+                    <executions>
+                        <execution>
+                            <id>copy-conf</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>copy</goal>
+                            </goals>
+                            <configuration>
+                                <sourceFile>target/classes/${project.artifactId}.conf</sourceFile>
+                                <destinationFile>target/${project.artifactId}.conf</destinationFile>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>copy-props</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>copy</goal>
+                            </goals>
+                            <configuration>
+                                <sourceFile>target/classes/application.properties</sourceFile>
+                                <destinationFile>target/conf/${project.artifactId}.properties</destinationFile>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>copy-logback-spring</id>
+                            <phase>prepare-package</phase>
+                            <goals>
+                                <goal>copy</goal>
+                            </goals>
+                            <configuration>
+                                <sourceFile>target/classes/logback-spring.xml</sourceFile>
+                                <destinationFile>target/conf/${project.artifactId}.logback-spring.xml</destinationFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>1.8</version>
+                    <executions>
+                        <execution>
+                            <id>delete-original-jar</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>run</goal>
+                            </goals>
+                            <configuration>
+                                <tasks>
+                                    <delete>
+                                        <fileset dir="${project.build.directory}" includes="${project.artifactId}-${project.version}.jar" />
+                                    </delete>
+                                </tasks>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+               <!-- <plugin>
+                    <groupId>com.google.cloud.tools</groupId>
+                    <artifactId>jib-maven-plugin</artifactId>
+                    <version>3.1.4</version>
+                    <configuration>
+                        <to>
+                            <image>${docker.repository}/mc-nrd-${project.artifactId}:${project.version}</image>
+                        </to>
+                        <container>
+                            <creationTime>USE_CURRENT_TIMESTAMP</creationTime>
+                        </container>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>site</phase>
+                            <goals>
+                                <goal>dockerBuild</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>-->
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

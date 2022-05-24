@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mdm.gpb.ru/XMLSchema">
+	<MessageHeaders>
+		<META UniqID="ServiceName">
+			<V_string>ClntCrtUpd</V_string>
+		</META>
+		<META UniqID="ContactPersonLogin">
+			<V_string>DO294</V_string>
+		</META>
+		<META UniqID="ContactPersonName">
+			<V_string>Янчук Мария Александровна</V_string>
+		</META>
+		<META UniqID="HostIp">
+			<V_string>10.168.140.208</V_string>
+		</META>
+	</MessageHeaders>
+	<MessageBody>
+		<MDMSubject>
+			<Domain>
+				<Specification UniqID="ROOT" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/0">Физическое лицо</Specification>
+				<GUID RAWID="30237186193" URI="MDM//" EvntType="UPDATE">448AA500DDC84584AF2A298BE4118FAA</GUID>
+				<vers>3</vers>
+				<UnxTimeStamp asString="2021-10-07T16:26:11.710+03:00">1633613171710</UnxTimeStamp>
+				<META UniqID="LastModified">
+					<V_dateTimeStamp>2020-07-27T09:35:08.000+03:00</V_dateTimeStamp>
+				</META>
+				<Nested>
+					<Specification UniqID="FULL_NAME" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/1">ФИО</Specification>
+					<GUID URI="MDM//" EvntType="UPDATE">24281430aa2d483eb6dc3f96ae25e3a5</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="CYRILLIC" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/2">Кириллица</Specification>
+						<GUID URI="MDM//" EvntType="UPDATE">bc601189be19423f81818d5961143530</GUID>
+						<vers>1</vers>
+						<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+						<Data>
+							<Statement SourceURI="//ESK/LocalID/30237186193" Name="Имя субъекта">
+								<V_ListTuples>
+									<Item Name="Surname">
+										<V_string>Маркова </V_string>
+									</Item>
+									<Item Name="Name">
+										<V_string>Елена</V_string>
+									</Item>
+									<Item Name="Patronymic">
+										<V_string>Георгиевна</V_string>
+									</Item>
+									<Item Name="FullName">
+										<V_string>Маркова Елена Георгиевна</V_string>
+									</Item>
+								</V_ListTuples>
+							</Statement>
+						</Data>
+					</Nested>
+				</Nested>
+				<Nested>
+					<Specification UniqID="PERSONAL_DATA" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/4">Персональные данные</Specification>
+					<GUID URI="MDM//" EvntType="UPDATE">526d7c8bf35e425c9d6be0a44351d94d</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+					<Data>
+						<Statement SourceURI="//ESK/LocalID/30237186193" Name="Персональные данные">
+							<V_ListTuples>
+								<Item Name="BirthDate">
+									<V_date>1968-03-21</V_date>
+								</Item>
+								<Item Name="DeathDate">
+									<V_date xsi:nil="true"/>
+								</Item>
+								<Item Name="Gender" MasterURI="//KNOSIS/GENDER_TYPE_REF/2">
+									<V_string>Женский</V_string>
+								</Item>
+								<Item Name="ResidentFCL" MasterURI="//KNOSIS/TAX_RESIDENT_REF/1">
+									<V_string>Резидент</V_string>
+								</Item>
+							</V_ListTuples>
+						</Statement>
+					</Data>
+				</Nested>
+				<Nested>
+					<Specification UniqID="IDENT_CODES" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/5">Идентификационные коды</Specification>
+					<GUID URI="MDM//" EvntType="UPDATE">6f43f118a3e84a8fb8ca6d69ec82718a</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+					<Data>
+						<Statement SourceURI="//ESK/LocalID/30237186193" Name="Идентификационные коды">
+							<V_ListTuples>
+								<Item Name="TaxID">
+									<V_string>421808408300</V_string>
+								</Item>
+								<Item Name="SNILS">
+									<V_string xsi:nil="true"/>
+								</Item>
+							</V_ListTuples>
+						</Statement>
+					</Data>
+				</Nested>
+				<Nested>
+					<Specification UniqID="PERSONAL_DOCS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/6">Документы</Specification>
+					<GUID URI="MDM//" EvntType="UPDATE">2e40beaaffb14b06807a9be80d6c3a1f</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="OFFICIAL" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/7">Официальные</Specification>
+						<GUID URI="MDM//" EvntType="UPDATE">69c58d311e6543acb175f7b071159afb</GUID>
+						<vers>1</vers>
+						<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+						<Nested>
+							<Specification URI="//KNOSIS/IDENT_CARD_TYPE_REF/1">Паспорт гражданина РФ</Specification>
+							<GUID URI="MDM//" EvntType="UPDATE">b1403564e52041c0ba0aeadddcee6777</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35286456168" Name="Паспорт гражданина РФ">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<Item Name="Primary">
+											<V_boolean>true</V_boolean>
+										</Item>
+										<Item Name="Citizenship">
+											<V_ListTuples>
+												<Item Name="Status" MasterURI="//KNOSIS/CITIZENSHIP_REF/1">
+													<V_string>Гражданин РФ</V_string>
+												</Item>
+												<Item Name="Country" MasterURI="//KNOSIS/COUNTRY_GROUP_OKSM/185">
+													<V_string>Россия</V_string>
+												</Item>
+												<Item Name="Refugee">
+													<V_boolean>false</V_boolean>
+												</Item>
+											</V_ListTuples>
+										</Item>
+										<Item Name="IdentCardData">
+											<V_ListTuples>
+												<Item Name="Series">
+													<V_string>5013</V_string>
+												</Item>
+												<Item Name="Number">
+													<V_string>102136</V_string>
+												</Item>
+												<Item Name="IssueAuthority">
+													<V_string>ОТДЕЛОМ УФМС РОССИИ ПО НОВОСИБИРСКОЙ ОБЛАСТИ В ДЗЕРЖИНСКОМ РАЙОНЕ Г.НОВОСИБИРСКА</V_string>
+												</Item>
+												<Item Name="DepartmentCode">
+													<V_string>540-002</V_string>
+												</Item>
+												<Item Name="IssueDate">
+													<V_date>2013-04-05</V_date>
+												</Item>
+											</V_ListTuples>
+										</Item>
+										<Item Name="NameOnIdentCard">
+											<V_ListTuples>
+												<Item Name="Cyrillic" SourceURI="//ESK/LocalID/33472178675">
+													<V_ListTuples>
+														<Item Name="Surname">
+															<V_string>Маркова </V_string>
+														</Item>
+														<Item Name="Name">
+															<V_string>Елена</V_string>
+														</Item>
+														<Item Name="Patronymic">
+															<V_string>Георгиевна</V_string>
+														</Item>
+														<Item Name="FullName">
+															<V_string>Маркова Елена Георгиевна</V_string>
+														</Item>
+													</V_ListTuples>
+												</Item>
+											</V_ListTuples>
+										</Item>
+										<Item Name="StatusInfo">
+											<V_ListTuples>
+												<Item Name="Valid">
+													<V_boolean>true</V_boolean>
+												</Item>
+												<Item Name="CheckDate">
+													<V_date>2021-10-07</V_date>
+												</Item>
+											</V_ListTuples>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+					</Nested>
+				</Nested>
+				<Nested>
+					<Specification UniqID="END_POINTS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/11">Адреса и контакты</Specification>
+					<GUID URI="MDM//" EvntType="UPDATE">7b994803c71643f0ac69f29d4057c5b2</GUID>
+					<vers>3</vers>
+					<UnxTimeStamp asString="2021-10-07T16:26:11.710+03:00">1633613171710</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="CONTACTS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/12">Контакты для связи</Specification>
+						<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF9750722E0530AB219A4BD65</GUID>
+						<vers>1</vers>
+						<UnxTimeStamp asString="2021-10-06T18:46:01.492+03:00">1633535161492</UnxTimeStamp>
+						<Nested>
+							<Specification URI="//KNOSIS/CONTACT_TYPE_REF/40">КОРП. Сотовый телефон</Specification>
+							<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF9740722E0530AB219A4BD65</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-06T18:46:01.436+03:00">1633535161436</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35286456566" Name="Сотовый телефон">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<!--Код страны-->
+										<Item Name="CountryCode">
+											<V_string>7</V_string>
+										</Item>
+										<!--Код города/оператора-->
+										<Item Name="CityCode">
+											<V_string>495</V_string>
+										</Item>
+										<!--Номер телефона без кода страны и кода города/оператора-->
+										<Item Name="Number">
+											<V_string>1234567</V_string>
+										</Item>
+										<!--Добавочный номер-->
+										<Item Name="Extension">
+											<V_string>1122</V_string>
+										</Item>
+										<!--номер из источника, может содержать несколько телефонов-->
+										<Item Name="RowSource">
+											<V_string>+74951234567 доб. 1122, +79175614343</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+						<Nested>
+							<Specification URI="//KNOSIS/CONTACT_TYPE_REF/42">КОРП. E-mail - рабочий</Specification>
+							<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF9760722E0530AB219A4BD65</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-06T18:46:01.492+03:00">1633535161492</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35286456568" Name="E-mail - рабочий">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<!--Электронная почта-->
+										<Item Name="RowSource">
+											<V_string>dentalsolo@mail.ru</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+					</Nested>
+					<Nested>
+						<Specification UniqID="ADDRESSES" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/13">Адреса</Specification>
+						<GUID URI="MDM//" EvntType="UPDATE">319de40bc7fb4ffe8edf466f14cdf169</GUID>
+						<vers>3</vers>
+						<UnxTimeStamp asString="2021-10-07T16:26:11.710+03:00">1633613171710</UnxTimeStamp>
+						<Nested>
+							<Specification URI="//KNOSIS/ADDRESS_TYPE_REF/3">ФЛ. Адрес места жительства (постоянной регистрации)</Specification>
+							<GUID URI="MDM//" EvntType="UPDATE">14f00927b71442f28a52f82eee07d46a</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/33471090837" Name="Адрес места регистрации">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<Item Name="Country">
+											<V_string>643</V_string>
+										</Item>
+										<Item Name="CountryStr">
+											<V_string>Россия</V_string>
+										</Item>
+										<Item Name="RegionCode">
+											<V_string>54</V_string>
+										</Item>
+										<Item Name="Region">
+											<V_string>Новосибирская</V_string>
+										</Item>
+										<Item Name="Index">
+											<V_string>630089</V_string>
+										</Item>
+										<Item Name="CityCode">
+											<V_string>540000010000000000000000000</V_string>
+										</Item>
+										<Item Name="City">
+											<V_string>Новосибирск</V_string>
+										</Item>
+										<Item Name="StreetCode">
+											<V_string>540000010000000072800000000</V_string>
+										</Item>
+										<Item Name="Street">
+											<V_string>ул Адриена Лежена</V_string>
+										</Item>
+										<Item Name="HouseNumber">
+											<V_string>13</V_string>
+										</Item>
+										<Item Name="Flat">
+											<V_string>10</V_string>
+										</Item>
+										<Item Name="AddrFiasGuid">
+											<V_string>9ba00f36-cc20-4153-b16f-4c986077b013</V_string>
+										</Item>
+										<Item Name="RowSource">
+											<V_string>Российская Федерация, 630089, обл Новосибирская, г Новосибирск, ул Адриена Лежена, дом 13, кв. 10</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+						<Nested>
+							<Specification URI="//KNOSIS/ADDRESS_TYPE_REF/1">Адрес фактический</Specification>
+							<GUID URI="MDM//" EvntType="UPDATE">23c8f4d0d2274553bec928a8e6818cbf</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-06T18:46:23.371+03:00">1633535183371</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35286456428" Name="Адрес фактический">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<Item Name="Country">
+											<V_string>643</V_string>
+										</Item>
+										<Item Name="CountryStr">
+											<V_string>Россия</V_string>
+										</Item>
+										<Item Name="RegionCode">
+											<V_string>54</V_string>
+										</Item>
+										<Item Name="Region">
+											<V_string>Новосибирская</V_string>
+										</Item>
+										<Item Name="Index">
+											<V_string>630089</V_string>
+										</Item>
+										<Item Name="CityCode">
+											<V_string>540000010000000000000000000</V_string>
+										</Item>
+										<Item Name="City">
+											<V_string>Новосибирск</V_string>
+										</Item>
+										<Item Name="StreetCode">
+											<V_string>540000010000000072800000000</V_string>
+										</Item>
+										<Item Name="Street">
+											<V_string>ул Адриена Лежена</V_string>
+										</Item>
+										<Item Name="HouseNumber">
+											<V_string>13</V_string>
+										</Item>
+										<Item Name="Flat">
+											<V_string>10</V_string>
+										</Item>
+										<Item Name="AddrFiasGuid">
+											<V_string>9ba00f36-cc20-4153-b16f-4c986077b013</V_string>
+										</Item>
+										<Item Name="RowSource">
+											<V_string>Российская Федерация, 630089, обл Новосибирская, г Новосибирск, ул Адриена Лежена, дом 13, кв. 10</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+						<Nested>
+							<Specification URI="//KNOSIS/ADDRESS_TYPE_REF/18">КОРП. Почтовый адрес</Specification>
+							<GUID URI="MDM//" EvntType="UPDATE">ea8c0a99c4ef4175a6bd965656fc8c2f</GUID>
+							<vers>1</vers>
+							<UnxTimeStamp asString="2021-10-07T16:26:11.710+03:00">1633613171710</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35291952808" Name="Почтовый адрес">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-10-07T16:24:45.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<Item Name="Country">
+											<V_string>643</V_string>
+										</Item>
+										<Item Name="CountryStr">
+											<V_string>Россия</V_string>
+										</Item>
+										<Item Name="RegionCode">
+											<V_string>54</V_string>
+										</Item>
+										<Item Name="Region">
+											<V_string>Новосибирская</V_string>
+										</Item>
+										<Item Name="Index">
+											<V_string>630089</V_string>
+										</Item>
+										<Item Name="CityCode">
+											<V_string>540000010000000000000000000</V_string>
+										</Item>
+										<Item Name="City">
+											<V_string>Новосибирск</V_string>
+										</Item>
+										<Item Name="StreetCode">
+											<V_string>540000010000000072800000000</V_string>
+										</Item>
+										<Item Name="Street">
+											<V_string>ул Адриена Лежена</V_string>
+										</Item>
+										<Item Name="HouseNumber">
+											<V_string>13</V_string>
+										</Item>
+										<Item Name="Flat">
+											<V_string>10</V_string>
+										</Item>
+										<Item Name="AddrFiasGuid">
+											<V_string>9ba00f36-cc20-4153-b16f-4c986077b013</V_string>
+										</Item>
+										<Item Name="RowSource">
+											<V_string>Российская Федерация, 630089, обл Новосибирская, г Новосибирск, ул Адриена Лежена, дом 13, кв. 10</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+						<Nested>
+							<Specification URI="//KNOSIS/ADDRESS_TYPE_REF/14">Адрес места рождения</Specification>
+							<GUID URI="MDM//" EvntType="UPDATE">270117f7f4f045ab9aaf2cfdc45c3fac</GUID>
+							<vers>2</vers>
+							<UnxTimeStamp asString="2021-10-07T16:14:54.160+03:00">1633612494160</UnxTimeStamp>
+							<Data>
+								<Statement SourceURI="//ESK/LocalID/35286456430" Name="Место рождения">
+									<META UniqID="LastModified">
+										<V_dateTimeStamp>2021-06-08T00:00:00.000+03:00</V_dateTimeStamp>
+									</META>
+									<V_ListTuples>
+										<Item Name="Country">
+											<V_string>643</V_string>
+										</Item>
+										<Item Name="CountryStr">
+											<V_string>СССР</V_string>
+										</Item>
+										<Item Name="RegionCode">
+											<V_string>42</V_string>
+										</Item>
+										<Item Name="Region">
+											<V_string>Кемеровская область - Кузбасс</V_string>
+										</Item>
+										<Item Name="CityCode">
+											<V_string>420000120000000000000000000</V_string>
+										</Item>
+										<Item Name="City">
+											<V_string>Новокузнецк</V_string>
+										</Item>
+										<Item Name="AddrFiasGuid">
+											<V_string>b28b6f6f-1435-444e-95a6-68c499b0d27a</V_string>
+										</Item>
+										<Item Name="RowSource">
+											<V_string>ГОР, НОВОКУЗНЕЦК КЕМЕРОВСКОЙ ОБЛ.</V_string>
+										</Item>
+									</V_ListTuples>
+								</Statement>
+							</Data>
+						</Nested>
+					</Nested>
+				</Nested>
+				<Nested>
+					<Specification UniqID="OTHER_DETAILS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/14">Прочие реквизиты</Specification>
+					<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF96E0722E0530AB219A4BD65</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:01.059+03:00">1633535161059</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="ADD_ATTRS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/16">Доп. атрибуты</Specification>
+						<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF96D0722E0530AB219A4BD65</GUID>
+						<vers>1</vers>
+						<UnxTimeStamp asString="2021-10-06T18:46:01.059+03:00">1633535161059</UnxTimeStamp>
+						<Data>
+							<Statement SourceURI="//ESK/LocalID/30237186193" Name="Доп. атрибуты">
+								<V_ListTuples>
+									<Item Name="IdentityType" MasterURI="//KNOSIS/СLIENT_IDENT_TYPE_REF/3">
+										<V_string>Идентифицированный Банком Клиент</V_string>
+									</Item>
+								</V_ListTuples>
+							</Statement>
+						</Data>
+					</Nested>
+				</Nested>
+				<Nested>
+					<Specification UniqID="AML" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/22">ПОД/ФТ</Specification>
+					<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF96C0722E0530AB219A4BD65</GUID>
+					<vers>1</vers>
+					<UnxTimeStamp asString="2021-10-06T18:46:01.017+03:00">1633535161017</UnxTimeStamp>
+					<Nested>
+						<Specification UniqID="PUBLIC_OFFICIAL" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/23">ПДЛ</Specification>
+						<GUID URI="ESK//" EvntType="CREATE">CDAB3B5FF96B0722E0530AB219A4BD65</GUID>
+						<vers>1</vers>
+						<UnxTimeStamp asString="2021-10-06T18:46:01.017+03:00">1633535161017</UnxTimeStamp>
+						<Data>
+							<Statement SourceURI="//ESK/LocalID/30237186193" Name="Характеристики ПДЛ">
+								<V_ListTuples>
+									<Item Name="PDL_ClosestPDL">
+										<V_boolean>false</V_boolean>
+									</Item>
+								</V_ListTuples>
+							</Statement>
+						</Data>
+					</Nested>
+				</Nested>
+			</Domain>
+		</MDMSubject>
+	</MessageBody>
+</Message>

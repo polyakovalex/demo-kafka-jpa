@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="CRMD//" EvntType="MERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="8fc807b8-1f63-ec11-9c80-005056b0a0f5" URI="MDM//" EvntType="UNMERGE">C8C8F30B13E94A6A8DF15A4FEB17389E</GUID>
+                <vers>8</vers>
+                <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2021-12-22T15:22:13+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="END_POINTS"/>
+                    <GUID URI="MDM//" EvntType="UNMERGE">8750520e7a084a2c87a2c51075ce7333</GUID>
+                    <vers>2</vers>
+                    <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="ADDRESSES"/>
+                        <GUID URI="MDM//" EvntType="UNMERGE">734486e7bc1f4421b0e59fcad6f22e60</GUID>
+                        <vers>2</vers>
+                        <UnxTimeStamp asString="2021-12-22T15:49:16.374+03:00">1640177356374</UnxTimeStamp>
+                        <Nested>
+                            <Specification UniqID="//KNOSIS/ADDRESS_TYPE_REF/1"/>
+                            <GUID URI="MDM//" EvntType="UNMERGE">12b09ea70a6041cbbe52c3a7a33d086c</GUID>
+                            <vers>1</vers>
+                            <UnxTimeStamp asString="2021-12-22T15:24:02.221+03:00">1640175842221</UnxTimeStamp>
+                            <Data>
+                                <Statement SourceURI="HFLabs-CDI.91327149">
+                                    <META UniqID="LastModified">
+                                        <V_dateTimeStamp>2021-12-22T15:24:02+03:00</V_dateTimeStamp>
+                                    </META>
+                                    <V_ListTuples>
+                                        <Item Name="Country">
+                                            <V_string>643</V_string>
+                                        </Item>
+                                        <Item Name="CountryStr">
+                                            <V_string>Россия</V_string>
+                                        </Item>
+                                        <Item Name="Primary">
+                                            <V_boolean>false</V_boolean>
+                                        </Item>
+                                        <Item Name="Index">
+                                            <V_string>109559</V_string>
+                                        </Item>
+                                        <Item Name="RegionCode">
+                                            <V_string>77</V_string>
+                                        </Item>
+                                        <Item Name="Region">
+                                            <V_string>Москва</V_string>
+                                        </Item>
+                                        <Item Name="City">
+                                            <V_string>Москва</V_string>
+                                        </Item>
+                                        <Item Name="Street">
+                                            <V_string>Белореченская</V_string>
+                                        </Item>
+                                        <Item Name="HouseNumber">
+                                            <V_string>14</V_string>
+                                        </Item>
+                                        <Item Name="Flat">
+                                            <V_string>125</V_string>
+                                        </Item>
+                                        <Item Name="KladrCode">
+                                            <V_string>7700000000001610162</V_string>
+                                        </Item>
+                                        <Item Name="OkatoCode">
+                                            <V_string>45290568000</V_string>
+                                        </Item>
+                                        <Item Name="AddrFiasGuid">
+                                            <V_string>5d9a0317-6023-4764-a014-def6383d6174</V_string>
+                                        </Item>
+                                        <Item Name="District">
+                                            <V_string>Центральный</V_string>
+                                        </Item>
+                                        <Item Name="RegionType">
+                                            <V_string>г</V_string>
+                                        </Item>
+                                        <Item Name="CityType">
+                                            <V_string>г</V_string>
+                                        </Item>
+                                        <Item Name="StreetType">
+                                            <V_string>ул</V_string>
+                                        </Item>
+                                        <Item Name="ValidationCode">
+                                            <V_string>CONFIRMED_MANUALLY</V_string>
+                                        </Item>
+                                        <Item Name="QualityCode">
+                                            <V_string>GOOD</V_string>
+                                        </Item>
+                                    </V_ListTuples>
+                                </Statement>
+                            </Data>
+                        </Nested>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

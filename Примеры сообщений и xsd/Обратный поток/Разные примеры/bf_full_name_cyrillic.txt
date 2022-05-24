@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="30237186193" URI="ESKA//" EvntType="MERGE">448AA500DDC84584AF2A298BE4118FAA</GUID>
+                <GUID RAWID="30237186193" URI="DR38//" EvntType="MERGE">1D793A93E02846DF8F62540EDE9F0299</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="30237186193" URI="MDM//" EvntType="UPDATE">448AA500DDC84584AF2A298BE4118FAA</GUID>
+                <vers>17</vers>
+                <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                <Nested>
+                    <Specification UniqID="FULL_NAME"/>
+                    <GUID URI="MDM//" EvntType="UPDATE">e67bc20862f94a51906c4710b3bade8c</GUID>
+                    <vers>2</vers>
+                    <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="CYRILLIC"/>
+                        <GUID URI="MDM//" EvntType="UPDATE">9cc2837a473c467b8160052cb1746d7a</GUID>
+                        <vers>2</vers>
+                        <UnxTimeStamp asString="2021-11-23T17:05:05.345+03:00">1637676305345</UnxTimeStamp>
+                        <Data>
+                            <Statement>
+                                <V_ListTuples>
+                                    <Item Name="Surname">
+                                        <V_string>Маркова</V_string>
+                                    </Item>
+                                    <Item Name="Name">
+                                        <V_string>Елена</V_string>
+                                    </Item>
+                                    <Item Name="Patronymic">
+                                        <V_string>Георгиевна</V_string>
+                                    </Item>
+                                    <Item Name="FullName">
+                                        <V_string>Маркова Елена Георгиевна</V_string>
+                                    </Item>
+                                </V_ListTuples>
+                            </Statement>
+                        </Data>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>

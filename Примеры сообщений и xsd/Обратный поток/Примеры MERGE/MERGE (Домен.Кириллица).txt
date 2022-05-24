@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<Message xmlns="http://mdm.gpb.ru/XMLSchema">
+    <MessageBody>
+        <MDMSubject>
+            <Wrappers>
+                <GUID RAWID="70000000566" URI="DRTL//" EvntType="MERGE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <GUID RAWID="39002775385" URI="ESKA//" EvntType="MERGE">A8B1B4D4E06C4DAEB838D8A32EC123DE</GUID>
+            </Wrappers>
+            <Domain>
+                <Specification UniqID="ROOT"/>
+                <GUID RAWID="70000000566" URI="MDM//" EvntType="CREATE">B035B9701DE340FD81F1D1029A645BF5</GUID>
+                <vers>1</vers>
+                <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                <META UniqID="LastModified">
+                    <V_dateTimeStamp>2022-03-09T10:23:56+03:00</V_dateTimeStamp>
+                </META>
+                <Nested>
+                    <Specification UniqID="FULL_NAME"/>
+                    <GUID URI="MDM//" EvntType="CREATE">0c2ea227ac9a4707bf9c44e5932010ad</GUID>
+                    <vers>1</vers>
+                    <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                    <Nested>
+                        <Specification UniqID="CYRILLIC"/>
+                        <GUID URI="MDM//" EvntType="CREATE">8df12464523841148ab185645e63460b</GUID>
+                        <vers>1</vers>
+                        <UnxTimeStamp asString="2022-03-09T10:24:54.939+03:00">1646810694939</UnxTimeStamp>
+                        <Data>
+                            <Statement>
+                                <V_ListTuples>
+                                    <Item Name="Surname">
+                                        <V_string>Ревученко</V_string>
+                                    </Item>
+                                    <Item Name="Name">
+                                        <V_string>Ноиля</V_string>
+                                    </Item>
+                                    <Item Name="Patronymic">
+                                        <V_string>Назимзяновна</V_string>
+                                    </Item>
+                                    <Item Name="FullName">
+                                        <V_string>Ревученко Ноиля Назимзяновна</V_string>
+                                    </Item>
+                                    <Item Name="FullNameQc">
+                                        <V_string>EDITED</V_string>
+                                    </Item>
+                                </V_ListTuples>
+                            </Statement>
+                        </Data>
+                    </Nested>
+                </Nested>
+            </Domain>
+        </MDMSubject>
+    </MessageBody>
+</Message>
