@@ -1,24 +1,14 @@
 package ru.gpb.demo.config;
 
-import java.util.HashMap;
-import java.util.Map;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
-import org.springframework.kafka.config.KafkaListenerContainerFactory;
-import org.springframework.kafka.core.ConsumerFactory;
-import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
 
 @Configuration
 public class KafkaConsumerConfig {
-
+// По сути это тоже самое что и producerconfig
   @Value("${spring.kafka.bootstrap-servers}")
   private String bootstrapServers;
-
+/*
   @Bean
   public Map<String, Object> consumerConfigs() {
     Map<String, Object> props = new HashMap<>();
@@ -41,6 +31,6 @@ public class KafkaConsumerConfig {
         new ConcurrentKafkaListenerContainerFactory<>();
     factory.setConsumerFactory(consumerFactory());
     return factory;
-  }
+  }*/
 }
 

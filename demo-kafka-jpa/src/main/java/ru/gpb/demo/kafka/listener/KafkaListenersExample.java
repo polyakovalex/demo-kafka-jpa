@@ -1,4 +1,4 @@
-package ru.gpb.demo.kafka;
+package ru.gpb.demo.kafka.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaListenersExample {
   Logger LOG = LoggerFactory.getLogger(KafkaListenersExample.class);
-
+ ///Не рабоатет
   @KafkaListener(topics = "reflectoring-1")
   void listener(String data) {
     LOG.info(data);
@@ -21,11 +21,19 @@ public class KafkaListenersExample {
     LOG.info("MultipleTopicListener - {}", message);
   }
 
+  //Метод сам читает данные из очрееди когда они там появятся
   @KafkaListener(
       topics = "${spring.kafka.consumer.in}",
       groupId = "${spring.kafka.consumer.group-id}")
   public void commonListenerForInTopics(String message) {
     LOG.info("MultipleInTopicListener - {}", message);
   }
+
+/*  @KafkaListener(topics = "${spring.kafka.consumer.in}")
+  @SendTo("reflectoring-1")
+  String listenAndReply(String message) {
+    LOG.info("ListenAndReply [{}]", message);
+    return "This is a reply sent after receiving message";
+  }*/
 
 }

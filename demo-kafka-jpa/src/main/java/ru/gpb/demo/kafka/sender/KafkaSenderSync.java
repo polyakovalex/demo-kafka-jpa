@@ -1,4 +1,4 @@
-package ru.gpb.demo.kafka;
+package ru.gpb.demo.kafka.sender;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
