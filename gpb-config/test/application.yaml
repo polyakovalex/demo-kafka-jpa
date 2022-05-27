@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: development
+---
+spring:
+  profiles: development
+  #kafka:
+  #bootstrap-servers: localhost:9092
+  #  consumer:
+  #    group-id: LOCAL
+refresh:
+  ratet: 2
+---
+spring:
+  profiles: production
+refresh:
+  ratet: 23434

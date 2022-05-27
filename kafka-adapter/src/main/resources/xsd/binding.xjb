@@ -1,0 +1,20 @@
+<jaxb:bindings
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns="http://java.sun.com/xml/ns/jaxws"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        version="2.1">
+
+    <jaxb:bindings schemaLocation="ClientChangeOrCreate_v08.6.0.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="ru.gpb.kafka.adapter.message"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+   <!-- <jaxb:bindings schemaLocation="statementOut.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="mc.nrd.accstatment.out.camt053"/>
+        </jaxb:schemaBindings>
+    </jaxb:bindings>-->
+
+</jaxb:bindings>

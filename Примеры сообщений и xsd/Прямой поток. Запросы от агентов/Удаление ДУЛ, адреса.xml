@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mdm.gpb.ru/XMLSchema">
+  <MessageHeaders>
+    <META UniqID="ServiceName">
+      <V_string>ClntCrtUpd</V_string>
+    </META>
+    <META UniqID="ContactPersonLogin">
+      <V_string>DO294</V_string>
+    </META>
+    <META UniqID="ContactPersonName">
+      <V_string>Янчук Мария Александровна</V_string>
+    </META>
+    <META UniqID="HostIp">
+      <V_string>10.168.140.205</V_string>
+    </META>
+  </MessageHeaders>
+  <MessageBody>
+    <MDMSubject>
+      <Domain>
+        <Specification UniqID="ROOT" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/0">Физическое лицо
+        </Specification>
+        <GUID RAWID="35202166213" URI="MDM//" EvntType="UPDATE">1473EDED918E45E9BD38E6AB089C0B69
+        </GUID>
+        <vers>3</vers>
+        <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+        <META UniqID="LastModified">
+          <V_dateTimeStamp>2021-09-23T12:11:19.000+03:00</V_dateTimeStamp>
+        </META>
+        <Nested>
+          <Specification UniqID="FULL_NAME" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/1">ФИО</Specification>
+          <GUID URI="MDM//" EvntType="UPDATE">172d283f98b24461b9d4d7ecfc760a24</GUID>
+          <vers>3</vers>
+          <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+          <Nested>
+            <Specification UniqID="LATIN_SCRIPT" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/3">Латиница
+            </Specification>
+            <GUID URI="MDM//" EvntType="UPDATE">91f0bef835594a69a3e04c69fa202471</GUID>
+            <vers>3</vers>
+            <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+            <Data>
+              <Statement SourceURI="//ESK/LocalID/35202318929" Name="Имя субъекта на латинице"
+                EvntType="DELETE">
+                <V_string xsi:nil="true"/>
+              </Statement>
+            </Data>
+          </Nested>
+        </Nested>
+        <Nested>
+          <Specification UniqID="PERSONAL_DOCS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/6">Документы
+          </Specification>
+          <GUID URI="MDM//" EvntType="UPDATE">df4e43b7ba664700acb6d1bd77cbe910</GUID>
+          <vers>3</vers>
+          <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+          <Nested>
+            <Specification UniqID="OFFICIAL" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/7">Официальные
+            </Specification>
+            <GUID URI="MDM//" EvntType="UPDATE">7cd74f6a789745aab021a776d02da86f</GUID>
+            <vers>3</vers>
+            <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+            <Nested>
+              <Specification URI="//KNOSIS/IDENT_CARD_TYPE_REF/9">Паспорт иностранного гражданина
+              </Specification>
+              <GUID URI="MDM//" EvntType="UPDATE">c4d4874f2ae446c8a83c3f8a258ea823</GUID>
+              <vers>3</vers>
+              <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+              <Data>
+                <Statement SourceURI="//ESK/LocalID/35202318802"
+                  Name="Паспорт иностранного гражданина" EvntType="DELETE">
+                  <V_string xsi:nil="true"/>
+                </Statement>
+              </Data>
+            </Nested>
+          </Nested>
+        </Nested>
+        <Nested>
+          <Specification UniqID="END_POINTS" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/11">Адреса и
+            контакты
+          </Specification>
+          <GUID URI="MDM//" EvntType="UPDATE">63c503ecfd004c8ca0934486ff2d5b63</GUID>
+          <vers>3</vers>
+          <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+          <Nested>
+            <Specification UniqID="ADDRESSES" URI="//KNOSIS/DOMAIN_STRUCTURE/v1/13">Адреса
+            </Specification>
+            <GUID URI="MDM//" EvntType="UPDATE">dd4b329abdc144dcbba7485f3f7c4119</GUID>
+            <vers>3</vers>
+            <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+            <Nested>
+              <Specification URI="//KNOSIS/ADDRESS_TYPE_REF/18">КОРП. Почтовый адрес</Specification>
+              <GUID URI="MDM//" EvntType="UPDATE">b931541d22e14ae6a5ac56c70d489f81</GUID>
+              <vers>3</vers>
+              <UnxTimeStamp asString="2021-09-23T12:58:10.761+03:00">1632391090761</UnxTimeStamp>
+              <Data>
+                <Statement SourceURI="//ESK/LocalID/35202318690" Name="Почтовый адрес"
+                  EvntType="DELETE">
+                  <V_string xsi:nil="true"/>
+                </Statement>
+              </Data>
+            </Nested>
+          </Nested>
+        </Nested>
+      </Domain>
+    </MDMSubject>
+  </MessageBody>
+</Message>

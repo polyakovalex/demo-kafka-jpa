@@ -12,7 +12,12 @@
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>kafka-adapter</module>
+    </modules>
 
     <properties>
         <java.version>11</java.version>
@@ -21,6 +26,11 @@
         <spring.boot.version>2.6.2</spring.boot.version>
         <junit.version>4.13.2</junit.version>
        <!-- <mssql.jdbc.version>4.0</mssql.jdbc.version>-->
+        <jaxb.version>2.3.0</jaxb.version>
+        <jaxb2-basics.version>1.11.1</jaxb2-basics.version>
+        <jaxb2-basics-annotate.version>1.1.0</jaxb2-basics-annotate.version>
+        <maven-jaxb2-plugin.version>0.14.0</maven-jaxb2-plugin.version>
+        <jaxb-fluent-api.version>3.0</jaxb-fluent-api.version>
     </properties>
 
     <dependencies>

@@ -26,6 +26,8 @@ public class KafkaProducerConfig {
         StringSerializer.class);
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
         StringSerializer.class);
+    /*props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+        XMLSerializer.class);*/
     return props;
   }
 

@@ -1,0 +1,22 @@
+package ru.gpb.demo;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import ru.gpb.demo.test.MyBean;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest
+class KafkaAdapterApplicationTests {
+
+  @Autowired
+  MyBean myBean;
+
+  @Test
+  void contextLoads() {
+    myBean.doSomething();
+  }
+
+}
