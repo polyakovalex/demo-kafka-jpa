@@ -1,6 +1,7 @@
 spring:
   profiles:
-    active: production
+    #active: @spring.profiles.active@
+   active: development
   config:
     # Для считывания всех общих конфигураций
     # Для запуска теста и приложения локально,
