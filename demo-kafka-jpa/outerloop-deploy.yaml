@@ -12,6 +12,8 @@ spec:
       labels:
         app: java-springboot-demo-app
     spec:
+      source:
+        contextDir: "simple-container-build/"
       containers:
         - name: my-java-springboot-demo
           image: java-springboot-demo-image:latest
