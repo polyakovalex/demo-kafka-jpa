@@ -25,9 +25,9 @@ FROM openjdk:11-jdk
 #COPY ru.gpb.demo.springboot.demo-kafka-jpa-0.0.1-SNAPSHOT.jar /deployments/app.jar
 
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
+COPY ${JAR_FILE} /deployments/app.jar
 EXPOSE 8081
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","/deployments/app.jar"]
 
 
 #ENTRYPOINT [ "java", "-jar", "/deployments/app.jar", "--server.port=8081" ]
