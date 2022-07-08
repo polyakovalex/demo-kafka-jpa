@@ -1,23 +1,23 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: my-java-kafka
+  name: my-java-springboot-demo
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-springboot-kafka-app
+      app: java-springboot-demo-app
   template:
     metadata:
       labels:
-        app: java-springboot-kafka-app
+        app: java-springboot-demo-app
     spec:
       containers:
-        - name: java-springboot-kafka-app
-          image: demo-kafka-jpa:latest
+        - name: my-java-springboot-demo
+          image: java-springboot-demo-image:latest
           ports:
             - name: http
-              containerPort: 8082
+              containerPort: 8081
               protocol: TCP
           resources:
             limits:
