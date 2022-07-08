@@ -13,6 +13,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>demo-kafka-jpa</name>
   <description>Demo project for Spring Boot+Kafka+JPA MS SQL</description>
+  <packaging>jar</packaging>
   <properties>
     <java.version>11</java.version>
   </properties>
@@ -54,7 +55,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
-      <plugin>
+     <!-- <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <version>0.16.4</version>
@@ -112,7 +113,7 @@
             </image>
           </images>
         </configuration>
-      </plugin>
+      </plugin>-->
     </plugins>
   </build>
 
