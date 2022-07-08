@@ -11,9 +11,9 @@ metadata:
   language: "java"
   provider: Red Hat
   supportUrl: https://github.com/devfile-samples/devfile-support#support-information
-parent:
-  id: java-springboot-demo
-  registryUrl: "https://registry.devfile.io"
+#parent:
+ # id: java-springboot-demo
+ # registryUrl: "https://registry.devfile.io"
 components:
   - name: outerloop-build
     image:
