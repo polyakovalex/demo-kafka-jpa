@@ -2,6 +2,7 @@ package ru.gpb.demo.kafka.listener;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,14 +22,12 @@ public class KafkaListenersBase {
   }
 */
   //Метод сам читает данные из очрееди когда они там появятся
-/*
   @KafkaListener(
       topics = "${spring.kafka.consumer.in}",
       groupId = "${spring.kafka.consumer.group-id}")
   public void commonListenerForInTopics(String message) {
     LOG.info("MultipleInTopicListener - {}", message);
   }
-*/
 
 /*  @KafkaListener(topics = "${spring.kafka.consumer.in}")
   @SendTo("reflectoring-1")

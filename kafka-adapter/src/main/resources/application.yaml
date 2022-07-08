@@ -7,3 +7,8 @@ spring:
     # Для запуска теста и приложения локально,
     # почему-то путь меняется, поэтому включим оба и чтобы не ругался если файла нет
     import: optional:file:./gpb-config/*/ , optional:file:../gpb-config/*/
+  kafka:
+   bootstrap-servers: localhost:9092
+   consumer:
+     in: in
+     group-id: LOCAL
