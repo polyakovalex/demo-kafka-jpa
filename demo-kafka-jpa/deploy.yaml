@@ -1,0 +1,50 @@
+schemaVersion: 2.2.0
+metadata:
+  name: demo-kafka-jpa
+  version: 1.1.0
+  attributes:
+    alpha.dockerimage-port: 8081
+  displayName: Demo Gpb Kafla Jpa
+  description: Demo Gpb Kafla Jpa using Maven
+  tags: ["Java", "Spring", "Kafka"]
+  projectType: "springboot"
+  language: "java"
+  provider: Red Hat
+  # url описания
+  supportUrl: https://github.com/devfile-samples/devfile-support#support-information
+parent:
+  id: demo-kafka-jpa
+  registryUrl: "https://github.com/polyakovalex"
+components:
+  - name: outerloop-build
+    image:
+      imageName: demo-kafka-jpa:latest
+      dockerfile:
+        uri: docker/Dockerfile
+        buildContext: .
+        rootRequired: false
+  - name: outerloop-deploy
+    attributes:
+      deployment/replicas: 1
+      deployment/cpuLimit: "100m"
+      deployment/cpuRequest: 10m
+      deployment/memoryLimit: 300Mi
+      deployment/memoryRequest: 180Mi
+      deployment/container-port: 8081
+    kubernetes:
+      uri: outerloop-deploy.yaml
+commands:
+  - id: build-image
+    apply:
+      component: outerloop-build
+  - id: deployk8s
+    apply:
+      component: outerloop-deploy
+  - id: deploy
+    composite:
+      commands:
+        - build-image
+        - deployk8s
+      group:
+        kind: deploy
+        isDefault: true
