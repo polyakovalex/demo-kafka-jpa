@@ -3,7 +3,7 @@ metadata:
   name: demo-kafka-jpa
   version: 1.1.0
   attributes:
-    alpha.dockerimage-port: 8081
+    alpha.dockerimage-port: 8082
   displayName: Demo Gpb Kafla Jpa
   description: Demo Gpb Kafla Jpa using Maven
   tags: ["Java", "Spring", "Kafka"]
@@ -16,14 +16,14 @@ parent:
   id: demo-kafka-jpa
   registryUrl: "https://github.com/polyakovalex"
 components:
-  - name: outerloop-build
+  - name: openshift-build
     image:
       imageName: demo-kafka-jpa:latest
       dockerfile:
         uri: docker/Dockerfile
         buildContext: .
         rootRequired: false
-  - name: outerloop-deploy
+  - name: openshift-deploy
     attributes:
       deployment/replicas: 1
       deployment/cpuLimit: "100m"
@@ -32,14 +32,14 @@ components:
       deployment/memoryRequest: 180Mi
       deployment/container-port: 8081
     kubernetes:
-      uri: outerloop-deploy.yaml
+      uri: openshift-deploy.yaml
 commands:
   - id: build-image
     apply:
       component: outerloop-build
   - id: deployk8s
     apply:
-      component: outerloop-deploy
+      component: openshift-deploy
   - id: deploy
     composite:
       commands:

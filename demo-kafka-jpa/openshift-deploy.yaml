@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-java-kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-springboot-kafka-app
+  template:
+    metadata:
+      labels:
+        app: java-springboot-kafka-app
+    spec:
+      containers:
+        - name: java-springboot-kafka-app
+          image: demo-kafka-jpa:latest
+          ports:
+            - name: http
+              containerPort: 8082
+              protocol: TCP
+          resources:
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
